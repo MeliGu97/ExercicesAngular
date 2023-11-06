@@ -5,8 +5,15 @@ interface Duck {
 
 class Thing implements Duck {
     name: string;
-    swim(): string {
-        throw new Error("Method not implemented.");
+    constructor(name: string) {
+        this.name = name;
     }
-    
+
+    swim(): string {
+        return "Nage comme un canard";
+    }
 }
+
+const duck = new Thing("Nanar");
+console.log(duck.swim());
+
